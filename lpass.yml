@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Copy .dotfiles from LastPass
+      copy:
+        content: "{{ lookup('lastpass', '{{ item }}', field='notes') }}"
+        dest: "~/{{ item }}"
+        mode: 0600
+      with_items:
+        - ".aws/config"
+        - ".aws/credentials"
+        - ".ssh/id_rsa"

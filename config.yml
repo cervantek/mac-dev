@@ -1,0 +1,47 @@
+---
+downloads: ~/.ansible-downloads/
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-versions
+
+homebrew_installed_packages:
+  # - ansible # Installed via system python pip.
+  - python #Python 3
+  - wget
+  - name: lastpass-cli
+    install_options: with-pinentry
+  - mas
+  - jq
+  - node
+  - name: go
+    install_options: cross-compile-common
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+#  - slack
+  - visual-studio-code
+  - postman
+  - java8
+  - gradle
+
+pip_packages:
+  - awscli
+  - aws-sam-cli
+  - pylint
+
+# Dock applications (in the left section)
+dock_apps:
+  - Google Chrome
+  - Visual Studio Code
+  - Utilities/Terminal
+  - Microsoft Outlook
+  - Slack
+
+# Dock folders (in the right section)
+dock_folders:
+  - ~/Downloads
+
+# mas "Microsoft Remote Desktop, id: 1295203466

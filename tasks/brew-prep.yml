@@ -1,0 +1,11 @@
+---
+- name: Ensure proper ownership of man folder for homebrew
+  file:
+    path: "/usr/local/{{ item }}"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: admin
+  become: yes
+  with_items:
+    - share/man
+    - share/man/man1

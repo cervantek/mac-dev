@@ -1,0 +1,6 @@
+[user]
+	name = John Morton
+	email = jtmorton@calpoly.edu
+
+[includeIf "gitdir:~/Desktop/github/"]
+    path = ~/Desktop/github/.gitconfig
