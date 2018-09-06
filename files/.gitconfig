@@ -2,5 +2,9 @@
 	name = John Morton
 	email = jtmorton@calpoly.edu
 
+[credential "https://git-codecommit.us-west-2.amazonaws.com"]
+    helper = !aws codecommit credential-helper $@ 
+    UseHttpPath = true  
+
 [includeIf "gitdir:~/Desktop/github/"]
     path = ~/Desktop/github/.gitconfig

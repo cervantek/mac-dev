@@ -6,7 +6,7 @@
     - config.yml
 
   tasks:
-    - include_tasks: tasks/dotfiles.yml
+    - import_tasks: tasks/dotfiles.yml
       tags:
         - debug
     - include_tasks: tasks/ansible-setup.yml

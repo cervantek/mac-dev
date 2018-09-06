@@ -1,10 +1,13 @@
 ---
 - file:
-    path: "~/{{ item }}"
+    path: "~/{{ item.path }}"
     state: directory
-    mode: 0700
-  with_items:
-    - ".aws"
+    mode: "{{ item.mode }}"
+  loop:
+    - path: ".aws"
+      mode: "0700"
+    - path: "bin"
+      mode: "0755"
 
 - name: Copy .ssh
   copy:
@@ -21,7 +24,7 @@
   copy:
     src: "{{ item }}"
     dest: "~/{{ item }}"
-  with_items:
+  loop:
     - .bash_profile
     - .bashrc
     - .saml2aws
