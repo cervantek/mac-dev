@@ -26,11 +26,15 @@ homebrew_cask_apps:
   - postman
   - java8
   - gradle
+  - maven
+  - virtualbox
+  - vagrant
 
 pip_packages:
   - awscli
   - aws-sam-cli
   - pylint
+  - pipenv
 
 # Dock applications (in the left section)
 dock_apps:
